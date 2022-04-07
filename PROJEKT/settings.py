@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-#kc-hzus=33&cj$hd-#7k_f8p4(calc8d@0#1=hii1^bx7t#io'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['pokolmenny.herokuapp.com', '127.0.0.1']
 
@@ -40,7 +40,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'APP',
-    'mysite',
 ]
 
 MIDDLEWARE = [
@@ -56,9 +55,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'PROJEKT.urls'
 
-TEMPLATE_DIRS = (
-    'os.path.join(BASE_DIR, "templates"),'
-)
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -75,6 +72,7 @@ TEMPLATES = [
     },
 ]
 
+os.path.join(BASE_DIR, 'templates')
 
 
 WSGI_APPLICATION = 'PROJEKT.wsgi.application'
